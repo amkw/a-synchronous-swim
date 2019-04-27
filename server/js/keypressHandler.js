@@ -1,5 +1,8 @@
 const _ = require('underscore');
 const keypress = require('keypress');
+console.log('entered key press handler')
+
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Utility Function ///////////////////////////////////////////////////////////
@@ -27,7 +30,6 @@ const logKeypress = (key) => {
 var message = ''; // a buffer to collect key presses
 
 module.exports.initialize = () => {
-
   // setup an event handler on standard input
   process.stdin.on('keypress', (chunk, key) => {
     // ctrl+c should quit the program

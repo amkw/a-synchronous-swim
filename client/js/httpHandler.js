@@ -1,5 +1,4 @@
 (function() {
-
   const serverUrl = 'http://127.0.0.1:3000';
 
   //
@@ -17,7 +16,7 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl, // added serve url from above
       cache: false,
       contentType: false,
       processData: false,
@@ -28,9 +27,26 @@
     });
   };
 
-  $('form').on('submit', function(e) {
+    const getSwimCommand = () => {
+      $.ajax({
+        type: 'GET',
+        // data: formData,
+        url: serverUrl, // added serve url from above
+        // cache: false,
+        // contentType: false,
+        // processData: false,
+        success: (data) => {
+          console.log(data);
+          // reload the page
+          // window.location = window.location.href;
+        },
+        fail: () => {
+          console.log('fail');
+        }
+      });
+    };
+    $('form').on('submit', function(e) {
     e.preventDefault();
-
     var form = $('form .file')[0];
     if (form.files.length === 0) {
       console.log('No file selected!');
