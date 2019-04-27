@@ -27,24 +27,31 @@
     });
   };
 
-    const getSwimCommand = () => {
-      $.ajax({
-        type: 'GET',
-        // data: formData,
-        url: serverUrl, // added serve url from above
-        // cache: false,
-        // contentType: false,
-        // processData: false,
-        success: (data) => {
-          console.log(data);
-          // reload the page
-          // window.location = window.location.href;
-        },
-        fail: () => {
-          console.log('fail');
-        }
-      });
-    };
+    // const getSwimCommand = () => {
+    //   $.ajax({
+    //     type: 'GET',
+    //     // data: formData,
+    //     url: serverUrl, // added serve url from above
+    //     // cache: false,
+    //     // contentType: false,
+    //     // processData: false,
+    //     success: (data) => {
+          
+    //       SwimTeam.move(data);
+    //       console.log(data);
+    //       // reload the page
+    //       // window.location = window.location.href;
+    //     },
+    //     fail: () => {
+    //       console.log('fail');
+    //     }
+
+    //   });
+    // };
+    // setInterval(getSwimCommand, 1000);
+    
+
+
     $('form').on('submit', function(e) {
     e.preventDefault();
     var form = $('form .file')[0];
