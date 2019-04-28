@@ -10,6 +10,8 @@ $('body').on('keydown', (event) => {
   }
 });
 
+//testing
+
 console.log('Client is running in the browser!');
 
 const serverUrl = 'http://127.0.0.1:3000';

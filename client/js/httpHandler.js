@@ -14,13 +14,13 @@
     var formData = new FormData();
     formData.append('file', file);
     $.ajax({
-      type: 'POST',
+      type: 'POST',//changed to get to test jpeg
       data: formData,
-      url: serverUrl, // added serve url from above
+      url: serverUrl + '/background.jpg',
       cache: false,
       contentType: false,
       processData: false,
-      success: () => {
+      success: (file) => {
         // reload the page
         window.location = window.location.href;
       }
@@ -50,7 +50,6 @@
     // };
     // setInterval(getSwimCommand, 1000);
     
-
 
     $('form').on('submit', function(e) {
     e.preventDefault();
